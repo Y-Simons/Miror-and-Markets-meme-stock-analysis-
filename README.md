@@ -5,7 +5,12 @@
 M.Sc dissertation — NEOMA Business School, M.Sc Finance & Big Data.
 Supervisor: Gabriel Giménez-Roche. Submitted 31 August 2024.
 
-📄 **[Read the dissertation (PDF)](dissertation/Simons_NEOMA_MSc_dissertation_Mirrors-and-Markets.pdf)**
+📄 **[Read the dissertation (PDF)](dissertation/Simons_NEOMA_MSc_dissertation_Mirrors-and-Markets.pdf)** —
+original version, unchanged.
+
+📘 **[Revised edition, 2026 (PDF)](revised-edition-2026/Simons_NEOMA_MSc_dissertation_revised-edition-2026.pdf)** —
+same question and data sources, corrected data construction and re-run analysis
+(see below).
 
 ## Research question
 
@@ -71,13 +76,32 @@ specifications and GARCH-MIDAS models:
 *Mirrors and Markets: Quantifying Reflexivity in Meme Stocks via Sentiment
 Cascades and GARCH-MIDAS — GameStop, 2020–2024* (draft, May 2026).
 
+## Revised edition (2026)
+
+[`revised-edition-2026/`](revised-edition-2026/) replicates the 2024 regression
+exactly (R² = 0.820) and shows why it cannot be interpreted: the Reddit data
+start on 4 January 2021, and the whole of 2020 — half of the sample — carried the
+sentiment of the first two posts, copied backwards. It then re-runs the analysis
+on the period actually covered (5 January – 26 August 2021, 151 sessions) with
+returns, robust standard errors, two-way Granger tests and wavelet coherence with
+significance testing (`revised_analysis.py`, fully reproducible; an erratum is
+included). Main revised findings:
+
+- Daily sentiment does not move with same-day returns, and returns never help
+  predict sentiment: no two-way (reflexive) loop is visible in daily data.
+- Lagged sentiment and attention predict lower next-day returns and attention
+  predicts volatility, but only because of the January 2021 short squeeze;
+  outside it none of these relationships survives.
+- Trading volume is the most robust companion of GME returns.
+
 ## Repository
 
 ```
-dissertation/  final dissertation (PDF)
-analysis/      analysis script (last saved version, 1 Sep 2024)
-data/          daily Reddit sentiment used as input
-paper-2026/    2026 follow-up paper (draft)
+dissertation/          final dissertation (PDF, original)
+analysis/              analysis script (last saved version, 1 Sep 2024)
+data/                  daily Reddit sentiment used as input
+revised-edition-2026/  revised edition (PDF), Python analysis, LaTeX source, figures, tables
+paper-2026/            2026 follow-up paper (draft)
 ```
 
 ## Data credit

@@ -1,0 +1,5 @@
+gme_vix_daily.csv
+*.aux
+*.log
+*.out
+*.toc

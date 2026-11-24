@@ -1,0 +1,32 @@
+\begin{tabular}{lccc}
+\toprule
+ & (1) Return$_t$ & (2) Return$_t$ & (3) $|$Return$_t|$ \\
+ & contemporaneous & predictive & attention \\
+\midrule
+Constant & $3.124$ & $22.533^{***}$ & $12.371$ \\
+ & $(3.452)$ & $(7.313)$ & $(7.905)$ \\
+Sentiment$_t$ & $-8.740$ &  & $-12.736$ \\
+ & $(15.628)$ &  & $(23.701)$ \\
+$\Delta$ attention$_t$ & $0.208$ &  &  \\
+ & $(0.888)$ &  &  \\
+$\Delta\ln$ volume$_t$ & $6.846^{***}$ &  &  \\
+ & $(2.568)$ &  &  \\
+VIX change$_t$ & $0.641$ &  & $0.057$ \\
+ & $(0.453)$ &  & $(0.254)$ \\
+Sentiment$_{t-1}$ &  & $-53.440^{***}$ &  \\
+ &  & $(19.424)$ &  \\
+Attention$_{t-1}$ &  & $-1.882^{***}$ &  \\
+ &  & $(0.711)$ &  \\
+Return$_{t-1}$ &  & $0.110$ &  \\
+ &  & $(0.092)$ &  \\
+$\Delta\ln$ volume$_{t-1}$ &  & $0.390$ &  \\
+ &  & $(1.783)$ &  \\
+VIX change$_{t-1}$ &  & $-0.414$ &  \\
+ &  & $(0.268)$ &  \\
+Attention$_t$ (log posts) &  &  & $-0.200$ \\
+ &  &  & $(0.621)$ \\
+\midrule
+$R^2$ & 0.160 & 0.099 & 0.003 \\
+Observations & 146 & 150 & 151 \\
+\bottomrule
+\end{tabular}
